@@ -1,6 +1,6 @@
 
 '''
-python generation/generate_eval_gpt4omini.py --model_name_or_path MODEL_NAME --output_name_or_path FILE_NAME
+python generation/generate_eval_test.py --model_name_or_path MODEL_NAME --output_name_or_path FILE_NAME
 
 
 '''
