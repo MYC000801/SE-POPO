@@ -16,5 +16,7 @@ conda env create -f conda_envs/rlhflow.yml
 
 ```
 bash LLama_SFT_POPO.sh
+bash LLama_SFT_XPO.sh
+bash LLama_SFT_DPO.sh
 ```
 
