@@ -79,10 +79,10 @@ EOT
 # Main loop for iterations
 for i in {1..3}
 do
-    iteration_name="LLaMA3_iter${i}_WPO1e2"
+    iteration_name="LLaMA3_iter${i}_POPO"
     jsonl_input="RLHFlow/ultrafeedback_iter${i}"
-    json_output="${base_path}/${iteration_prefix}${i}_${iteration_name}_WPO1e2"
-    model_output="${base_path}/${iteration_prefix}${i}_${iteration_name}_WPO1e2_reward.json"
+    json_output="${base_path}/${iteration_prefix}${i}_${iteration_name}_POPO"
+    model_output="${base_path}/${iteration_prefix}${i}_${iteration_name}_POPO_reward.json"
 
     # Determine the model path: first iteration uses the initial model, subsequent iterations use the previous iteration's model
     if [ $i -eq 1 ]; then
@@ -90,13 +90,13 @@ do
         sam_model_path=$initial_model
     elif [ $i -eq 2 ]; then
         previous_iteration=$((i-1))
-        model_path="LLaMA3_iter${previous_iteration}_WPO1e2"
+        model_path="LLaMA3_iter${previous_iteration}_POPO"
         sam_model_path=$initial_model
     else
         previous_iteration=$((i-1))
         sam_previous_iteration=$((i-2))
-        model_path="LLaMA3_iter${previous_iteration}_WPO1e2"
-        sam_model_path="LLaMA3_iter${sam_previous_iteration}_WPO1e2"
+        model_path="LLaMA3_iter${previous_iteration}_POPO"
+        sam_model_path="LLaMA3_iter${sam_previous_iteration}_POPO"
     fi
 
 
