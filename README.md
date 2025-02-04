@@ -15,6 +15,6 @@ conda env create -f conda_envs/rlhflow.yml
 ### 2. Run bash file
 
 ```
-bash LLama_SFT_wpo_1e2.sh
+bash LLama_SFT_POPO.sh
 ```
 
