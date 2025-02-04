@@ -4,13 +4,10 @@
 ### 1. Generate response from models
 
 ```
-conda env create -f conda_envs/vllm.yml
-conda env create -f conda_envs/rlhflow.yml
+python generation/generate_eval_alphca.py --model_name_or_path MODEL_NAME --output_name_or_path FILE_NAME
+python generation/generate_eval_test.py --model_name_or_path MODEL_NAME --output_name_or_path FILE_NAME
 ```
 
-### 2. Run bash file
+### 2. Check the win rate and average reward using wr_reward.ipynb
 
-```
-bash LLama_SFT_POPO.sh
-```
 
